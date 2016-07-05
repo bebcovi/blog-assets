@@ -1,0 +1,40 @@
+pre {
+  margin: 1rem -1rem;
+  padding: 1rem;
+  border-radius: 0.3em;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+
+  @media (max-width: 800px) {
+    border-radius: 0;
+  }
+}
+
+code {
+  display: inline-block;
+  // ligatures in monospace fonts can be awful
+  font-variant-ligatures: no-common-ligatures;
+}
+
+:not(pre) > code {
+  padding: 0 .25em;
+  border-radius: 0.25rem;
+  word-wrap: break-word;
+  text-transform: none; // resetting in case the parent is uppercase
+}
+
+a {
+  code {
+    color: $color-primary;
+    border-color: rgba($color-primary, 0.5);
+    text-decoration: none;
+  }
+
+  &:hover,
+  &:focus {
+    code {
+      color: $color-secondary;
+      border-color: $color-secondary;
+    }
+  }
+}
